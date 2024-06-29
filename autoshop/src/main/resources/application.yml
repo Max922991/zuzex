@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/autoshop
+    username: postgres
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+  application:
+    name: autoshop
+
+server:
+  servlet:
+    context-path: /api/autoshop/
+  port: 8086
+
+gateway: http://localhost:8080

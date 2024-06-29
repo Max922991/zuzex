@@ -1,0 +1,48 @@
+spring:
+  main:
+    web-application-type: reactive
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+  cloud:
+    gateway:
+      routes:
+        - id: autoshop
+          uri: http://localhost:8086/api/autoshop/
+          predicates:
+            - Path=/api/autoshop/**
+
+        - id: bank
+          uri: http://localhost:8083/api/bank/
+          predicates:
+            - Path=/api/bank/**
+
+        - id: cars
+          uri: http://localhost:8081/api/cars/
+          predicates:
+            - Path=/api/cars/**
+
+        - id: citizens
+          uri: http://localhost:8087/api/citizens
+          predicates:
+            - Path=/api/citizens/**
+
+        - id: houses
+          uri: http://localhost:8082/api/houses/
+          predicates:
+            - Path=/api/houses/**
+
+        - id: police
+          uri: http://localhost:8084/api/police/
+          predicates:
+            - Path=/api/police/**
+
+        - id: school
+          uri: http://localhost:8085/api/school/
+          predicates:
+            - Path=/api/school/**
+
+        - id: coordinator
+          uri: http://localhost:8088/api/pay_auto_coordinator/
+          predicates:
+            - Path=/api/pay_auto_coordinator/**

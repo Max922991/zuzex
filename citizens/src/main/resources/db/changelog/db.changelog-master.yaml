@@ -1,0 +1,7 @@
+databaseChangeLog:
+   - include:
+      file: db/changelog/changelogs/changelog_added_table_gender.yaml
+   - include:
+      file: db/changelog/changelogs/changelog_added_table_citizen.yaml
+   - include:
+      file: db/changelog/changelogs/changelog_added_table_passport.yaml

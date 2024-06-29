@@ -1,0 +1,3 @@
+databaseChangeLog:
+  - include:
+      file: db/sql/added_data_to_color.sql

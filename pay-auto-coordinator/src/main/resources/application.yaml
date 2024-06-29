@@ -1,0 +1,11 @@
+spring:
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+
+server:
+  servlet:
+    context-path: /api/pay_auto_coordinator/
+  port: 8088
+
+gateway: http://localhost:8080

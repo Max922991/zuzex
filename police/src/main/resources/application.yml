@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/police
+    username: postgres
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+  application:
+    name: police
+server:
+  servlet:
+    context-path: /api/police/
+  port: 8084
+
+gateway: http://localhost:8080

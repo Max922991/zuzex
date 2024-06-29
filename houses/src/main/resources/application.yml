@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/houses
+    username: postgres
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+  application:
+    name: houses
+server:
+  servlet:
+    context-path: /api/houses/
+  port: 8082

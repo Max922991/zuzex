@@ -1,0 +1,5 @@
+databaseChangeLog:
+  - include:
+      file: db/sql/create_table_status_order_confirm.sql
+  - include:
+      file: db/sql/create_table_status_order.sql

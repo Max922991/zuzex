@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/citizens
+    username: postgres
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+  application:
+    name: citizens
+  properties:
+    hibernate:
+      show_sql: true
+      use_sql_comments: true
+      format_sql: true
+
+server:
+  servlet:
+    context-path: /api/citizens/
+  port: 8087
+
+gateway: http://localhost:8080
